@@ -1,0 +1,24 @@
+# Включаем поддержку UTF-8
+AddDefaultCharset UTF-8
+
+# Запрещаем просмотр содержимого папок
+Options -Indexes
+
+# Основной файл для обработки запросов
+DirectoryIndex index.php
+
+# Включаем обработку ошибок PHP (для отладки)
+php_flag display_errors on
+php_value error_reporting E_ALL
+
+# Защита от доступа к важным файлам
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Разрешаем доступ к index.php и другим нужным файлам
+<Files "index.php">
+    Order allow,deny
+    Allow from all
+</Files>
