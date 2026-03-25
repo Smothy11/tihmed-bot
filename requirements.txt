@@ -1,4 +1,3 @@
-vkbottle.bot
 vkbottle
 logging
 sqlite3
