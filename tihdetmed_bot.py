@@ -6,22 +6,22 @@ from datetime import datetime, timedelta
 from flask import Flask, request
 import json
 
-app = Flask(__name__)
-
-@app.route('/', methods=['POST'])
-def webhook():
-    data = request.json
-    if data['type'] == 'confirmation':
-        return 'ваш_код_подтверждения'
-    elif data['type'] == 'message_new':
-        # Обработка сообщения
-        return 'ok'
-    return 'ok'
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
-# Настройка логирования
-logging.basicConfig(level=logging.INFO)
+# app = Flask(__name__)
+#
+# @app.route('/', methods=['POST'])
+# def webhook():
+#     data = request.json
+#     if data['type'] == 'confirmation':
+#         return 'ваш_код_подтверждения'
+#     elif data['type'] == 'message_new':
+#         # Обработка сообщения
+#         return 'ok'
+#     return 'ok'
+#
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0', port=5000)
+# # Настройка логирования
+# logging.basicConfig(level=logging.INFO)
 
 # Токен твоей группы
 bot = Bot(
