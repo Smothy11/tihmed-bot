@@ -3,3 +3,4 @@ logging
 sqlite3
 datetime
 flask
+python-dotenv
